@@ -3,9 +3,6 @@ const HARGA_WORKSHOP = {
   uiux:     { nama: "UI/UX Design", harga: 125000 },
   cyber:    { nama: "Cybersecurity Dasar", harga: 175000 }
 };
-const DISKON_TIPE = { Mahasiswa: 0.20, Umum: 0 };
-const MIN_WORKSHOP_BUNDLE = 3;
-const DISKON_BUNDLE = 0.10;
 
 const form = document.getElementById("formDaftar");
 const boxRingkasan = document.getElementById("ringkasan");
@@ -44,21 +41,17 @@ function validasi(data) {
   return valid;
 }
 
-function hitungBiaya(daftarWorkshop, tipe) {
-  let subtotal = 0;
+function hitungBiaya(daftarWorkshop) {
+  let total = 0;
   const namaWorkshop = [];
 
   for (let i = 0; i < daftarWorkshop.length; i++) {
     const item = HARGA_WORKSHOP[daftarWorkshop[i]];
-    subtotal += item.harga;
+    total += item.harga;
     namaWorkshop.push(item.nama);
   }
 
-  let potongan = subtotal * DISKON_TIPE[tipe];
-  if (daftarWorkshop.length >= MIN_WORKSHOP_BUNDLE) {
-    potongan += subtotal * DISKON_BUNDLE;
-  }
-  return { subtotal, potongan, total: subtotal - potongan, namaWorkshop };
+  return { total, namaWorkshop };
 }
 
 function tampilkanRingkasan(data, hasil) {
@@ -75,9 +68,7 @@ function tampilkanRingkasan(data, hasil) {
     ["Tipe peserta", data.tipe],
     ["Tanggal hadir", data.tanggal],
     ["Sesi", data.sesi],
-    ["Workshop", hasil.namaWorkshop.join(", ")],
-    ["Subtotal", rupiah(hasil.subtotal)],
-    ["Diskon", "- " + rupiah(hasil.potongan)]
+    ["Workshop", hasil.namaWorkshop.join(", ")]
   ];
   baris.forEach(([label, isi]) => {
     const dt = document.createElement("dt");
@@ -109,7 +100,7 @@ form.addEventListener("submit", function (e) {
 
   if (!validasi(data)) return;
 
-  tampilkanRingkasan(data, hitungBiaya(data.workshop, data.tipe));
+  tampilkanRingkasan(data, hitungBiaya(data.workshop));
 });
 
 form.addEventListener("reset", function () {
