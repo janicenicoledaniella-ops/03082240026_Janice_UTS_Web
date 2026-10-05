@@ -1,0 +1,214 @@
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EVENTHUB – Pendaftaran Workshop Informatika</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark eh-navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#beranda">EVENT<span class="eh-logo-accent">HUB</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Buka menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#workshop">Workshop</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pendaftaran">Pendaftaran</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section id="beranda" class="eh-hero">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold">Tiga workshop, satu hari, langsung praktik.</h1>
+          <p class="lead">EVENTHUB adalah workshop informatika untuk mahasiswa dan umum. Pilih topik, isi data diri, dan lihat total biaya tanpa pindah halaman.</p>
+          <a href="#pendaftaran" class="btn btn-lg eh-btn-cta">Daftar sekarang</a>
+          <a href="#workshop" class="btn btn-lg btn-outline-light ms-2">Lihat workshop</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="assets/image.png" class="img-fluid rounded-4" alt="Ilustrasi layar kode dan ponsel pada workshop EVENTHUB">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-5" id="info">
+    <div class="row g-4">
+      <article class="col-md-7">
+        <h2>Tentang kegiatan</h2>
+        <p>Workshop diadakan di Kampus UPH Medan pada 11–25 Maret 2025. Berlamgsung mulai dari jam 13.00 WIB - selesai.</p>
+        <p>Informasi lengkap tersedia di <a href="https://www.uph.edu" target="_blank" rel="noopener">situs UPH</a>, atau hubungi panitia melalui <a href="mailto:panitia@eventhub.example">panitia@gmail.com</a>.</p>
+      </article>
+      <aside class="col-md-5">
+        <h2>Fasilitas</h2>
+        <ul class="eh-list">
+          <li>Sertifikat kehadiran</li>
+          <li>Modul dan materi digital</li>
+          <li>Makan siang dan coffee break</li>
+          <li>Akses grup diskusi peserta</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="workshop" class="eh-section-alt py-5">
+    <div class="container">
+      <h2 class="mb-4">Pilihan workshop</h2>
+      <div class="row g-4">
+        <article class="col-md-4">
+          <div class="card eh-card h-100">
+            <div class="card-body">
+              <h3 class="h5 card-title">Front-End Web</h3>
+              <p class="card-text">Membangun halaman responsif dengan HTML, CSS, Bootstrap, dan JavaScript dasar.</p>
+              <p class="eh-price">Rp 150.000</p>
+            </div>
+          </div>
+        </article>
+        <article class="col-md-4">
+          <div class="card eh-card h-100">
+            <div class="card-body">
+              <h3 class="h5 card-title">UI/UX Design</h3>
+              <p class="card-text">Merancang wireframe dan prototipe yang mudah dipakai, lengkap dengan uji coba ke pengguna.</p>
+              <p class="eh-price">Rp 125.000</p>
+            </div>
+          </div>
+        </article>
+        <article class="col-md-4">
+          <div class="card eh-card h-100">
+            <div class="card-body">
+              <h3 class="h5 card-title">Cybersecurity Dasar</h3>
+              <p class="card-text">Mengenali ancaman umum, praktik password yang aman, dan dasar keamanan aplikasi web.</p>
+              <p class="eh-price">Rp 175.000</p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="h5 mt-5">Jadwal workshop</h3>
+      <div class="table-responsive">
+        <table class="table table-bordered eh-table align-middle">
+          <caption class="visually-hidden">Jadwal workshop EVENTHUB</caption>
+          <thead>
+            <tr><th>Tanggal</th><th>Sesi</th><th>Workshop</th><th>Ruang</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>23 Maret 2025</td><td>Pagi (09.00–12.00), Siang (13.00–16.00)</td><td>Front-End Web</td><td>Lab 1</td></tr>
+            <tr><td>24 Maret 2025</td><td>Pagi (09.00–12.00), Siang (13.00–16.00)</td><td>UI/UX Design</td><td>Lab 2</td></tr>
+            <tr><td>25 Maret 2025</td><td>Pagi (09.00–12.00), Siang (13.00–16.00)</td><td>Cybersecurity Dasar</td><td>Lab 1</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="pendaftaran" class="container py-5">
+    <h2 class="mb-4">Formulir pendaftaran</h2>
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <form id="formDaftar" action="#" method="get" novalidate>
+          <div class="mb-3">
+            <label for="nama" class="form-label">Nama lengkap</label>
+            <input type="text" class="form-control" id="nama" name="nama" placeholder="Contoh: Janice Nicole" required>
+            <div class="eh-error" id="err-nama"></div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="nama@email.com" required>
+            <div class="eh-error" id="err-email"></div>
+          </div>
+          <div class="mb-3">
+            <label for="hp" class="form-label">Nomor HP</label>
+            <input type="tel" class="form-control" id="hp" name="hp" placeholder="08xxxxxxxxxx" required>
+            <div class="eh-error" id="err-hp"></div>
+          </div>
+
+          <fieldset class="mb-3">
+            <legend class="form-label fs-6">Tipe peserta</legend>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tipe" id="tipe1" value="Mahasiswa" checked>
+              <label class="form-check-label" for="tipe1">Mahasiswa</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tipe" id="tipe2" value="Umum">
+              <label class="form-check-label" for="tipe2">Umum</label>
+            </div>
+          </fieldset>
+
+          <div class="mb-3">
+            <label for="tanggal" class="form-label">Tanggal hadir</label>
+            <input type="date" class="form-control" id="tanggal" name="tanggal" min="2026-11-14" max="2026-11-15" required>
+            <div class="eh-error" id="err-tanggal"></div>
+          </div>
+
+          <fieldset class="mb-3">
+            <legend class="form-label fs-6">Pilihan workshop</legend>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="workshop" id="w1" value="frontend">
+              <label class="form-check-label" for="w1">Front-End Web</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="workshop" id="w2" value="uiux">
+              <label class="form-check-label" for="w2">UI/UX Design</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="workshop" id="w3" value="cyber">
+              <label class="form-check-label" for="w3">Cybersecurity Dasar</label>
+            </div>
+            <div class="eh-error" id="err-workshop"></div>
+          </fieldset>
+
+          <div class="mb-3">
+            <label for="sesi" class="form-label">Sesi</label>
+            <select class="form-select" id="sesi" name="sesi">
+              <option value="Pagi">Pagi (09.00–12.00)</option>
+              <option value="Siang">Siang (13.00–16.00)</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label for="asal" class="form-label">Asal institusi</label>
+            <input list="daftarInstitusi" class="form-control" id="asal" name="asal" placeholder="Ketik atau pilih">
+            <datalist id="daftarInstitusi">
+              <option value="Universitas Pelita Harapan">
+              <option value="Universitas Sumatera Utara">
+              <option value="Universitas Negeri Medan">
+              <option value="Lainnya">
+            </datalist>
+          </div>
+
+          <button type="submit" class="btn eh-btn-cta btn-lg">Daftar</button>
+          <button type="reset" class="btn btn-outline-secondary btn-lg ms-2" id="btnReset">Reset</button>
+        </form>
+      </div>
+
+      <div class="col-lg-5">
+        <div id="ringkasan" class="eh-summary" aria-live="polite">
+          <h3 class="h5">Ringkasan pendaftaran</h3>
+          <p class="text-muted mb-0">Isi formulir lalu tekan Daftar. Ringkasan dan total biaya muncul di sini.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="eh-footer py-4">
+  <div class="container text-center">
+    <p class="mb-0">&copy; 2026 EVENTHUB. Dibuat untuk UTS Pemrograman Web.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
