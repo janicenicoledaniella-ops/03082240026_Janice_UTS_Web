@@ -41,8 +41,6 @@ Di proyek ini Bootstrap diambil dari CDN, jadi saat halaman dibuka browser juga 
 - Front-End Web : Rp 150.000
 - UI/UX Design : Rp 125.000
 - Cybersecurity Dasar : Rp 175.000
-- Mahasiswa diskon 20%
-- Ikut ketiga workshop diskon tambahan 10%
 
 Angka ini ada di bagian atas js/script.js.
 
